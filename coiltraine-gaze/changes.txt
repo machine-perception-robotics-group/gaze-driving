@@ -1,0 +1,67 @@
+coiltraine-bedrock
+
+Bedrock edition
+
+バージョン管理用メモ
+GitHub使えよとか重々承知です．ごめんなさい．
+
+11/28
+coiltraine, coiltraine-gaze, v2, v3を統合して，
+各バージョンで動かしてきたモデルを一元的に管理・実験が行えるように変更する．
+
+
+12/26
+~~~ Bedrock v2 ~~~
+変更点：
+ - Gaze-Lossモデルの実装
+変更プログラム：
+ - network/coil_model.py
+ - train.py
+ - validate.py
+ - run_drive.py
+ - loss.py
+ちょっと更新
+ - abn_agent.py
+ - gaze_agent.py
+ - coil_agent.py
+ - coil_logger.py
+追加設定ファイル
+ - proposed_gloss_vgg_S1.yaml
+
+01/05
+変更点：
+ - New GazeModelの追加
+変更プログラム：
+ - network/models/gaze_models/__init__.py
+ - gaze_model.py
+追加プログラム：
+ - network/models/gaze_models/conditional_conv_model.py
+
+
+============================================================================
+メモ（これまでのバージョン軌跡）
+v2:
+gaze使用モデルの設定ファイルを変更
+ - res_g1, ... をres_gに統一
+ - res_gの詳細設定でg1, g2...を設定
+gaze1設定の1箇所入力モデル(gaze1ex[ABCD])の追加
+ - いろんな視線の追加方法を定義・選択するresgazeパッケージを追加
+  - gaze1かgaze1exをresnet_gaze.pyから選択可能に
+
+v3:
+ABNモデルの追加
+ - 視線マスクモデル追加
+ - 視線Lossモデル追加
+ABNを用いない通常運転モデルの追加
+
+それらに伴う設定ファイルの記述方法，読み込み方法の変更
+
+Custom:
+好きな設定でベンチマーク評価が可能（BEでは破棄）
+学習時の入力画像および特徴マップ，視線情報を可視化して保存可能に変更&移植済み
+
+
+統合版にするにあたって：
+・v1およびv2で使っていたgazeの学習モデルを名前で区別
+・上記の変更に従って各設定ファイルのモデル名を修正
+・全Agentで中間特徴（およびAttenionmapやgazemap）が取得できるように変更
