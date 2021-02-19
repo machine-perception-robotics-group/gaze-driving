@@ -30,3 +30,14 @@ GazeDataを僕のHDDから用意
 以下サンプルコード（あくまで自分の環境での）
 
 `python3 gaze_model_eval.py -m co-conv -b 1 -vd ../GazeData/Datasets/DriveGaze_Video/Val/ --test-epoch best_test --exp-name coconv_vid --gpu-id 0`
+
+#### オプション
+- `--gpu-id`：使用するGPU番号
+- `--test-epoch`：評価に使用するモデル．数字はエポックの指定．ベストモデルの指定は`best_test`or`best_train`
+- `--exp-name`：実験名の指定．`experiments/`以下に実験名でディレクトリを作成，結果を保存
+- `--valid-dataset`, `-vd`：評価データセットのパス
+- `--batch`, `-b`：バッチサイズ
+- `--model`, `-m`：学習する視線推定モデルの選択．選択肢は`co-conv`, `conv-cmd`, `conv-cmd-v2`
+- `--dataset-type`, `-dt`：使用するデータセットのタイプ．`v1`は単フレーム視線データ, `video`は動画視線データ
+- `--work-space`, `-ws`：無視
+
