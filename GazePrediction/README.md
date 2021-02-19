@@ -12,7 +12,7 @@ GazeDataを僕のHDDから用意
 ### 学習コードの実行
 以下サンプルコード（あくまで自分の環境での）
 
-`python3 gaze_model_train.py -b 16 --gpu-id 0 -td ../GazeData/Datasets/Gaze_average/GazeTrain/ -vd ../GazeData/Datasets/Gaze_average/GazeEval/ --exp-name co_vgg_dsv3_ave --model conditional_conv_model`
+`python3 gaze_model_train.py -b 16 --gpu-id 0 -td ../GazeData/Datasets/Gaze_average/GazeTrain/ -vd ../GazeData/Datasets/Gaze_average/GazeEval/ --exp-name sample_exp --model co-conv`
 
 #### オプション
 - `--epoch`, `-e`：学習エポック数
@@ -29,7 +29,7 @@ GazeDataを僕のHDDから用意
 ### 評価コードの実行
 以下サンプルコード（あくまで自分の環境での）
 
-`python3 gaze_model_eval.py -m co-conv -b 1 -vd ../GazeData/Datasets/DriveGaze_Video/Val/ --test-epoch best_test --exp-name coconv_vid --gpu-id 0`
+`python3 gaze_model_eval.py -m co-conv -b 1 -vd ../GazeData/Datasets/DriveGaze_Video/Val/ --test-epoch best_test --exp-name sample_exp --gpu-id 0`
 
 #### オプション
 - `--gpu-id`：使用するGPU番号
