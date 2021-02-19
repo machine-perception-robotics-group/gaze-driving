@@ -18,5 +18,9 @@ aaa
 - `--gpu-id`:使用するGPU番号
 - `--train-dataset`, `-td`:学習データセットのパス
 - `--valid-dataset`, `-vd`:評価データセットのパス
+- `--exp-name`:実験名の指定．`experiments/`以下に実験名でディレクトリを作成，結果を保存
+- `--model`, `-m`:
+- `--dataset-type`, `-dt`:
+- `--work-space`, `-ws`:
 
 ### 評価コードの実行
