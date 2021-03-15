@@ -3,14 +3,14 @@
 ### 導入方法
 condaの仮想環境を利用．
 
-基本的なはじめ方はオリジナルコードのGithubを参照 (https://github.com/felipecode/coiltraine)．
+基本的なはじめ方はオリジナルコードのGithubを参照 (https://github.com/felipecode/coiltraine
 
 ### データセットの用意
-こちらから (https://github.com/felipecode/coiltraine/blob/master/docs/exploring_limitations.md)．
+こちらから (https://github.com/felipecode/coiltraine/blob/master/docs/exploring_limitations.md
 
 ### シミュレータ環境
 CARLA0.8.4をDocker上で使用．
-導入方法はこちらの__Massive data collection__を参照 (https://github.com/felipecode/coiltraine/blob/master/docs/exploring_limitations.md)
+導入方法はこちらの__Massive data collection__を参照 (https://github.com/felipecode/coiltraine/blob/master/docs/exploring_limitations.md
 
 ### 実行方法
 #### 学習
